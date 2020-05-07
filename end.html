@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>A Reading Life</title>
+	<link rel="icon" 
+      type="image/png" 
+      href="page.png">
+	<title>A Reading Life By Tiana Richards</title>
 	<style>
 
-	body{
+	body{padding-top: 3%; 
 		background-color: lightblue; 
+						 background-color: var(--primary-color);
+  
+  transition: all 300ms ease;
 	}
 
 .page1{
@@ -15,7 +21,7 @@
 	height:   80%;
 	padding-top: 5%;
 	padding-left: 5%; 
-	background-color: rgb(235, 231, 216);
+	background-color: var(--third-color);
 	border: 2px solid black;
 	z-index: 1; 
 	padding-right: 5%;
@@ -28,7 +34,7 @@
 	height:   80%;
 	padding-top: 5%;
 	padding-left: 5%; 
-	background-color: rgb(235, 231, 216);
+	background-color: var(--third-color);
 	border: 2px solid black;
 	z-index: 2; 
 	padding-right: 5%;
@@ -41,7 +47,7 @@
 	height:   80%;
 	padding-top: 5%;
 	padding-left: 5%; 
-	background-color: rgb(235, 231, 216);
+	background-color: var(--third-color);
 	border: 2px solid black;
 	z-index: 3; 
 	padding-right: 5%;
@@ -54,7 +60,7 @@
 	height:   80%;
 	padding-top: 5%;
 	padding-left: 5%; 
-	background-color: rgb(235, 231, 216);
+	background-color: var(--third-color);
 	border: 2px solid black;
 	z-index: 4; 
 	padding-right: 5%;
@@ -67,22 +73,35 @@
 	height:   80%;
 	padding-top: 5%;
 	padding-left: 5%; 
-	background-color: rgb(235, 231, 216);
+	background-color: var(--third-color);
 	border: 2px solid black;
 	z-index: 5; 
 	padding-right: 5%;
 }
-#head{font-family: myFirstFont;
-	top:4%;
+.page6{
 	position: absolute;
-	color: rgb(0,0,77);
+right: 55%; 
+	width:  30%;
+	height:   80%;
+	padding-top: 5%;
+	padding-left: 5%; 
+	background-color: var(--third-color);
+	border: 2px solid black;
+	z-index: 2; 
+	padding-right: 5%;
+
+}
+#head{font-family: myFirstFont;
+	top:1%;
+	position: absolute;
+	color: var(--fourth-color);
 	font-size: 30px;
 }
 #text{font-family: myFirstFont;
 	margin-top: 0%;
 	font-size: 20px;
 line-height: 1.5;
-color: rgb(0,0,77);
+color: var(--fourth-color);
 
 
 }
@@ -90,16 +109,90 @@ color: rgb(0,0,77);
 	position: absolute;
 	left:95%;
 	top: 94%;
-	color: rgb(0,0,77);
+	color: var(--fourth-color);
 }
-.dot {position: absolute;
-  height: 25px;
-  width: 25px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
- /* left:90%;
-	top: 94%;*/
+:root {
+
+  --primary-color: lightblue;
+  --secondary-color: #002c47;
+   --third-color: rgb(235, 231, 216);
+   --fourth-color: #003f66;
+
+
+
+ }
+
+
+.icon-button {top: 1%;
+	left: 97%;
+  position: absolute;
+}
+
+.icon-button:before {
+  content: var(--mode-icon);
+  color: var(--mode-icon-color);
+  font-family: ClassicFortAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  font-size: 50px;
+}
+
+.mode-button {
+  float:right;
+  background-color: transparent;
+  border-radius: 500px;
+  border: none;
+}
+
+#head{font-family: myFirstFont;
+top:0%;
+	position: absolute;
+	font-size: 40px;
+	
+	color: #003f66;
+	
+}
+#head2{font-family: myFirstFont;
+top: 90%;
+left: 70%;
+	position: absolute;
+	font-size: 25px;
+	transform: skewX(0.001deg);
+	 transition: transform .3s ease-in-out;
+	
+	color: #003f66;
+}
+
+#head3{font-family: myFirstFont;
+top: 95%;
+left: 70%;
+	position: absolute;
+	font-size: 15px;
+	transform: skewX(0.001deg);
+	 transition: transform .3s ease-in-out;
+	color: #003f66;
+	
+}
+#text{font-family: myFirstFont;
+	text-align: left;
+	font-size: 20px;
+line-height: 1.5;
+color: #003f66;}
+
+/*#text2{font-family: myFirstFont;
+	transform: skewX(0.001deg);
+	 transition: transform .3s ease-in-out;
+	text-align: left;
+	font-size: 20px;
+line-height: 1.5;
+color: #003f66;}*/
+	
+#head2:hover {
+    transform: skewX(-20deg);
+}
+#head3:hover {
+    transform: skewX(-20deg);
 }
 @font-face{
 font-family: myFirstFont;
@@ -109,6 +202,10 @@ src: url("BigCaslonRegular.otf");
 </style>
 </head>
 <body>
+			 <button id="dark-mode-toggle" class="mode-button">
+      <i class="icon-button"></i>
+
+    </button>
 	<div class="page1">
 <p> hi</p>
 </div>
@@ -126,13 +223,101 @@ src: url("BigCaslonRegular.otf");
 </h1>
 <br>
 <br>
-<p id="text"> Recently in Vulture, art critic Jerry Saltz opened a hard headedly titled guide "How to be an artist: 33 rules to take you from clueless amateur to generational talent (or at least help you live life a little more creatively)" by writing, "Art is for anyone. It is just not for everyone." I wo not say anything about art (not now, at least), but I do believe, however naively, that reading is for anyone and everyone. "High" and "low" are racist and classist terms I tend to try to forget about it. Black queer culture has taught us that it is not only texts that get read, it is you and me, and your mama.
+<p id="text"> Recently in Vulture, art critic Jerry Saltz opened a hard headedly titled guide "How to be an artist: 33 rules to take you from clueless amateur to generational talent (or at least help you live life a little more creatively)" by writing, <br> "Art is for anyone. <br>It is just not for everyone." I will not say anything about art (not now, at least), but I do believe, however naively, that reading is for anyone and everyone. "High" and "low" are racist and classist terms I tend to try to forget about it.<br> Black queer culture has taught us that it is not only texts that get read, it is you and me, and your mama.
 <br>
-In 2018, I read little for pleasure. I read for work. I worked at home. I worked in different countries, different beds. The less I read, the less together I was emotionally and thus creatively. My relationship to working, and the conditions that I work and read through, are both what sustain me and condemn me. After a breakup, I dated more than ever this year, which was still not much, but with these new people who had been in my life barely a minute, I would give them everything: time, dreams, dinners, desire. After all, everything is not much when you feel like you have nothing. I could not stop comparing their exterior with my interior. The terror would stop, however momentarily, when I devoured the insides of a text.
+In 2018, I read little for pleasure. I read for work. I worked at home. I worked in different countries, different beds. <br>The less I read, the less together I was emotionally and thus creatively. My relationship to working, and the conditions that I work and read through, are both what sustain me and condemn me. After a breakup, I dated more than ever this year, which was still not much, but with these new people who had been in my life barely a minute, I would give them everything: time, dreams, dinners, desire. After all, everything is not much when you feel like you have nothing. I could not stop comparing their exterior with my interior. The terror would stop, however momentarily, when I devoured the insides of a text.
 
 </p>
 <p id="number">9</p>
 </div>
+ <div class="page6">
+ 	<a href="index.html">
+ 	<h1 id="head2" id="text2">A Reading Life</h1>
+	</a>
+	<a href="index.html">
+<h2 id="head3" id="text2">Tiana Richards</h2>
+</a>
+</div>
+<script>
 
+	var msg  = document.title;
+      var speed = 150;
+      var endChar = "... ";
+      var pos = 0;
+      
+      function moveTitle()
+      {
+       	var ml = msg.length;
+      		
+      	title = msg.substr(pos,ml) + endChar + msg.substr(0,pos);
+    	document.title = title;
+      	
+        pos++;
+    	if (pos > ml) pos=0;
+        window.setTimeout("moveTitle()",speed);
+      }
+  
+      moveTitle();
+
+	! function(e, t) {
+  "object" == typeof exports && "undefined" != typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define(t) : e.darken = t()
+}(this, function() {
+  var e = function(e, t) {
+    var r = this;
+    "function" == typeof e && (t = e, e = {}), e = Object.assign({
+      container: null,
+      default: "light",
+      toggle: null,
+      remember: "darken-mode",
+      usePrefersColorScheme: !0,
+      class: "darken",
+      variables: {}
+    }, e), this.dark = !1, e.remember ? localStorage.getItem(e.remember) ? e.default = localStorage.getItem(e.remember) : e.usePrefersColorScheme && (window.matchMedia("(prefers-color-scheme: dark)") ? e.default = "dark" : window.matchMedia("(prefers-color-scheme: light)") && (e.default = "light")) : e.usePrefersColorScheme && (window.matchMedia("(prefers-color-scheme: dark)") ? e.default = "dark" : window.matchMedia("(prefers-color-scheme: light)") && (e.default = "light"), window.matchMedia("(prefers-color-scheme: dark)").addListener(function(e) {
+      e.matches && r.on()
+    }), window.matchMedia("(prefers-color-scheme: light)").addListener(function(e) {
+      e.matches && r.off()
+    })), e.toggle && document.querySelector(e.toggle).addEventListener("click", function(e) {
+      e.preventDefault(), r.toggle()
+    }), document.addEventListener("darken-dark", function() {
+      e.container ? document.querySelector(e.container).classList.add(e.class) : document.body.classList.add(e.class);
+      for (var o = e.container ? document.querySelector(e.container) : document.documentElement, n = 0, a = Object.entries(e.variables); n < a.length; n += 1) {
+        var d = a[n],
+          c = d[0],
+          i = d[1];
+        i && "object" == typeof i && (Array.isArray(i) ? o.style.setProperty(c, i[1]) : o.style.setProperty(c, i.dark))
+      }
+      e.remember && localStorage.setItem(e.remember, r.dark ? "dark" : "light"), "function" == typeof t && t(r.dark)
+    }, !1), document.addEventListener("darken-light", function() {
+      e.container ? document.querySelector(e.container).classList.remove(e.class) : document.body.classList.remove(e.class);
+      for (var o = e.container ? document.querySelector(e.container) : document.documentElement, n = 0, a = Object.entries(e.variables); n < a.length; n += 1) {
+        var d = a[n],
+          c = d[0],
+          i = d[1];
+        i && "object" == typeof i && (Array.isArray(i) ? o.style.setProperty(c, i[0]) : o.style.setProperty(c, i.light))
+      }
+      e.remember && localStorage.setItem(e.remember, r.dark ? "dark" : "light"), "function" == typeof t && t(r.dark)
+    }, !1), "light" === e.default ? this.off() : "dark" === e.default && this.on()
+  };
+  return e.prototype.toggle = function() {
+    this.dark = !this.dark, this.dark ? document.dispatchEvent(new Event("darken-dark")) : document.dispatchEvent(new Event("darken-light"))
+  }, e.prototype.on = function() {
+    this.dark = !0, document.dispatchEvent(new Event("darken-dark"))
+  }, e.prototype.off = function() {
+    this.dark = !1, document.dispatchEvent(new Event("darken-light"))
+  }, e
+});
+
+const darkmode = new darken({
+  toggle: "#dark-mode-toggle",
+  variables: {
+    "--primary-color": ["lightblue", "#002c47"],
+    "--secondary-color": ["#002c47", "#lightblue"],
+     "--third-color": ["rgb(235, 231, 216)", "#003f66"],
+   "--fourth-color": ["#003f66", "rgb(235, 231, 216)"],
+    "--mode-icon": ["'\\f185'", "'\\f186'"],
+    "--mode-icon-color": ["#FDB813", "#E5E5E5"],
+  }
+});
+</script>
 </body>
 </html>

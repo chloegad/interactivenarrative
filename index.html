@@ -1,68 +1,315 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>A Reading Life</title>
+	<link rel="icon" 
+      type="image/png" 
+      href="page.png">
+	<title>A Reading Life By Tiana Richards</title>
 	<style>
 
 	body{
 		background-color: lightblue; 
+		 
 	}
 
-		.page1{
+		#page1{
 	position: absolute;
 	left: 30%;
 	top: 15%;
 	width:  20%;
 	height:   50%;
-	padding-top: 10%;
+	padding-top: 15%;
 	padding-left: 10%; 
+	padding-right: 10%; 
+	padding-bottom: 10%;
 	background-color: rgb(235, 231, 216);
 	border: 2px solid black;
 	z-index: 2; 
+	 cursor: move;
+
 }
-		.page2{
+		#page2{
 	position: absolute;
 	left: 30%;
 	top: 15%;
 	width:  20%;
 	height:   50%;
-	padding-top: 10%;
+	padding-top: 15%;
 	padding-left: 10%; 
+	padding-right: 10%; 
+	padding-bottom: 10%;
 	background-color: rgb(235, 231, 216);
 	border: 2px solid black;
-	transform: rotateZ(-210deg);
+	transform: rotateZ(390deg);
 	z-index: 2; 
+	 cursor: move;
+	
 }
 	
-	.page3{
+	#page3{
 	position: absolute;
 	left: 30%;
 	top: 15%;
 	width:  20%;
 	height:   50%;
-	padding-top: 10%;
+	padding-top: 15%;
 	padding-left: 10%; 
+	padding-right: 10%; 
+	padding-bottom: 10%;
 	background-color: rgb(235, 231, 216);
 	border: 2px solid black;
-	transform: rotateZ(-190deg);
+	transform: rotateZ(350deg);
 	z-index: 4; 
+	 cursor: move;
+	
 }
+
+#head{font-family: myFirstFont;
+top:4%;
+	position: absolute;
+	font-size: 40px;
+	
+	color: #003f66;
+	
+}
+#head2{font-family: myFirstFont;
+top:15%;
+	position: absolute;
+	font-size: 21px;
+	
+	color: #003f66;
+}
+#text{font-family: myFirstFont;
+	transform: skewX(0.001deg);
+	 transition: transform .3s ease-in-out;
+	text-align: left;
+	font-size: 20px;
+line-height: 1.5;
+color: #003f66;}
+	
+#text:hover {
+    transform: skewX(-20deg);
+}
+
+
+.long-arrow-right{position: absolute;
+	top: 90%;
+	left: 90%;
+  margin: 30px auto;
+  width: 25px;
+  height: 25px;
+  border-top: 2px solid #003f66;
+  border-left: 2px solid #003f66;
+  transform: rotate(135deg);
+  color: #003f66;
+}
+
+
+
+@font-face{
+font-family: myFirstFont;
+src: url("BigCaslonRegular.otf");
+
+}
+
+
+
 	</style>
 </head>
 <body>
-	<div class="page1">
-<p> hi</p>
-</div>
-	<div class="page2">
-<p> hi</p>
-</div>
-<a href="unraveling.html">
-	<div class="page3">
-		
-<p> hi</p>
 
+	<div id="page1">
+<p> hi</p>
 </div>
+	<div id="page2">
+<a href="resisting.html" style="text-decoration: none">
+<p id="text">"I live my work and work my life. Even as the separation of the two grows thinner and thinner."</p>
 </a>
+<br>
+<a href="unraveling.html" style="text-decoration: none">
+<p id="text">"Reading as a condition for creativity, and how texts can seep into our lives, our work, and our dreams."</p>
+</a>
+<br>
+<a href="end.html" style="text-decoration: none">
+<p id="text">"Words are just dictionary entries until you decide they are worth another chance at life."</p>
+</a>
+</div>
+
+	<div id="page3">
+
+<h1 id="head">A Reading Life</h1>
+<br>	
+<h2 id="head2">Tiana Richards</h2>
+<a href="unraveling.html" style="text-decoration: none">	
+<p id="text">"Both a tangled chain and a text must be loved, loosened, and delicately gripped."</p>
+</a>
+<br>
+<a href="gettingclose.html" style="text-decoration: none">	
+<p id="text">"Language can form us while simultaneously creating boundaries that make us more isolated."</p>
+</a>
+<br>
+<a href="othering.html" style="text-decoration: none">
+<p id="text">"You must name that which you need to sort, categorize, classify, or order, and yet all attempts at sealing things with language will eventually fail."</p>
+</a>
+	<div class="long-arrow-right"></div>
+</div>
+
+
+<script>
+ var msg  = document.title;
+      var speed = 150;
+      var endChar = "... ";
+      var pos = 0;
+      
+      function moveTitle()
+      {
+       	var ml = msg.length;
+      		
+      	title = msg.substr(pos,ml) + endChar + msg.substr(0,pos);
+    	document.title = title;
+      	
+        pos++;
+    	if (pos > ml) pos=0;
+        window.setTimeout("moveTitle()",speed);
+      }
+  
+      moveTitle();
+
+
+var box = document.getElementById('page3');
+
+box.addEventListener('mousedown', startDrag, false);
+window.addEventListener('mouseup', stopDrag);
+
+function stopDrag(e){
+  console.log('mouse up');
+  window.removeEventListener('mousemove', moveIt, true);
+}
+
+function startDrag(e){
+  window.addEventListener('mousemove', moveIt, true);
+}
+
+function moveIt(e){
+
+  var maxTop = window.innerHeight;
+    
+ var maxLeft = window.innerWidth;
+console.log(maxTop, e.clientY);
+  
+  if(e.clientY <= 0){
+    box.style.top = '0px';
+  }
+  else if (e.clientY > maxTop){
+    box.style.top = maxTop - 250 + 'px';
+  }
+  else {
+    box.style.top = e.clientY - 125 + 'px';
+  }
+  
+  
+  if(e.clientX <= 0){
+    box.style.left = '0px';
+  }
+  else if (e.clientX > maxLeft){
+    box.style.left = maxLeft - 250 + 'px';
+  }
+  else {
+    box.style.left = e.clientX - 125 + 'px';    
+  }
+  
+}
+
+var box2 = document.getElementById('page2');
+
+box2.addEventListener('mousedown', startDrag, false);
+window.addEventListener('mouseup', stopDrag);
+
+function stopDrag2(e){
+  console.log('mouse up');
+  window.removeEventListener('mousemove', moveIt, true);
+}
+
+function startDrag2(e){
+  window.addEventListener('mousemove', moveIt, true);
+}
+
+function moveIt2(e){
+
+  var maxTop = window.innerHeight;
+    
+ var maxLeft = window.innerWidth;
+console.log(maxTop, e.clientY);
+  
+  if(e.clientY <= 0){
+    box.style.top = '0px';
+  }
+  else if (e.clientY > maxTop){
+    box.style.top = maxTop - 250 + 'px';
+  }
+  else {
+    box.style.top = e.clientY - 125 + 'px';
+  }
+  
+  
+  if(e.clientX <= 0){
+    box.style.left = '0px';
+  }
+  else if (e.clientX > maxLeft){
+    box.style.left = maxLeft - 250 + 'px';
+  }
+  else {
+    box.style.left = e.clientX - 125 + 'px';    
+  }
+  
+}
+
+
+var box3 = document.getElementById('page1');
+
+box3.addEventListener('mousedown', startDrag, false);
+window.addEventListener('mouseup', stopDrag);
+
+function stopDrag3(e){
+  console.log('mouse up');
+  window.removeEventListener('mousemove', moveIt, true);
+}
+
+function startDrag3(e){
+  window.addEventListener('mousemove', moveIt, true);
+}
+
+function moveIt3(e){
+
+  var maxTop = window.innerHeight;
+    
+ var maxLeft = window.innerWidth;
+console.log(maxTop, e.clientY);
+  
+  if(e.clientY <= 0){
+    box.style.top = '0px';
+  }
+  else if (e.clientY > maxTop){
+    box.style.top = maxTop - 250 + 'px';
+  }
+  else {
+    box.style.top = e.clientY - 125 + 'px';
+  }
+  
+  
+  if(e.clientX <= 0){
+    box.style.left = '0px';
+  }
+  else if (e.clientX > maxLeft){
+    box.style.left = maxLeft - 250 + 'px';
+  }
+  else {
+    box.style.left = e.clientX - 125 + 'px';    
+  }
+  
+}
+	
+	</script>
 
 </body>
 </html>

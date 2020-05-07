@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>A reading Life</title>
+	<link rel="icon" 
+      type="image/png" 
+      href="page.png">
+	<title>A reading Life By Tiana Richards</title>
 <style>
 
-	body{
+	body{padding-top: 3%;
 		background-color: lightblue; 
+			 background-color: var(--primary-color);
+  
+  transition: all 300ms ease;
 	}
 
 .page1{
 	position: absolute;
 	width:  30%;
 	height:   80%;
+	left: 5%;
 	padding-top: 5%;
 	padding-left: 5%; 
-	background-color: rgb(235, 231, 216);
+	background-color: var(--third-color);
 	border: 2px solid black;
 	z-index: 2; 
 }
 .page2{
 	position: absolute;
-	left: 1%; 
+	left: 6.5%; 
 	width:  30%;
 	height:   80%;
 	padding-top: 5%;
 	padding-left: 5%; 
-	background-color: rgb(235, 231, 216);
+	background-color: var(--third-color);
 	border: 2px solid black;
 	z-index: 2; 
 }
 .page3{
 	position: absolute;
-	left: 2%; 
+	left: 8%; 
 	width:  30%;
 	height:   80%;
 	padding-top: 5%;
 	padding-left: 5%; 
-	background-color: rgb(235, 231, 216);
+	background-color: var(--third-color);
 	border: 2px solid black;
 	z-index: 2; 
 }
 .page4{
 	position: absolute;
-	left: 3%; 
+	left: 10%; 
 	width:  30%;
 	height:   80%;
 	padding-top: 5%;
 	padding-left: 5%; 
 	padding-right: 5%;
-	background-color: rgb(235, 231, 216);
+	background-color: var(--third-color);
 	border: 2px solid black;
 	z-index: 2; 
 	text-align: left; 
@@ -60,22 +67,46 @@
 	height:   80%;
 	padding-top: 5%;
 	padding-left: 5%; 
-	background-color: rgb(235, 231, 216);
+	background-color: var(--third-color);
 	border: 2px solid black;
-	z-index: 2; 
+	z-index: 3; 
+	padding-right: 5%;
+}
+.page6{
+	position: absolute;
+	left: 57%; 
+	width:  30%;
+	height:   80%;
+	padding-top: 5%;
+	padding-left: 5%; 
+	background-color: var(--third-color);
+	border: 2px solid black;
+	z-index: 1; 
+	padding-right: 5%;
+}
+.page7{
+	position: absolute;
+	left: 56%; 
+	width:  30%;
+	height:   80%;
+	padding-top: 5%;
+	padding-left: 5%; 
+	background-color: var(--third-color);
+	border: 2px solid black;
+	z-index: 1; 
 	padding-right: 5%;
 }
 #head{font-family: myFirstFont;
 	top:4%;
 	position: absolute;
-	color: rgb(0,0,77);
+	color: var(--fourth-color);
 	font-size: 30px;
 }
 #text{font-family: myFirstFont;
 	margin-top: 0%;
 	font-size: 20px;
 line-height: 1.5;
-color: rgb(0,0,77);
+color: var(--fourth-color);
 
 
 }
@@ -83,16 +114,47 @@ color: rgb(0,0,77);
 	position: absolute;
 	left:95%;
 	top: 94%;
-	color: rgb(0,0,77);
+	color: var(--fourth-color);
+	transform: skewX(0.001deg);
+	 transition: transform .3s ease-in-out;
 }
-.dot {position: absolute;
-  height: 25px;
-  width: 25px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
- /* left:90%;
-	top: 94%;*/
+
+#number:hover {
+    transform: skewX(-20deg);
+}
+
+:root {
+
+  --primary-color: lightblue;
+  --secondary-color: #002c47;
+   --third-color: rgb(235, 231, 216);
+   --fourth-color: #003f66;
+
+
+
+ }
+
+
+.icon-button {top: 0%;
+	left: 97%;
+  position: absolute;
+}
+
+.icon-button:before {
+  content: var(--mode-icon);
+  color: var(--mode-icon-color);
+  font-family: ClassicFortAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  font-size: 50px;
+}
+
+.mode-button {
+  float:right;
+  background-color: transparent;
+  border-radius: 500px;
+  border: none;
 }
 @font-face{
 font-family: myFirstFont;
@@ -103,6 +165,12 @@ src: url("BigCaslonRegular.otf");
 </style>
 </head>
 <body>
+
+
+	 <button id="dark-mode-toggle" class="mode-button">
+      <i class="icon-button"></i>
+
+    </button>
 <div class="page1">
 <p> hi</p>
 </div>
@@ -122,7 +190,7 @@ src: url("BigCaslonRegular.otf");
 	<br>
 What academics call "high theory" takes some getting used to, and it takes even more time to question the highness of it all. While reading the white men who enjoy the divine gift of being classified as Philosophy, an attention to who gets sorted and how, what fits into what category, and how things are ordered and arranged will help us imagine those matters of excess, i.e., that which cannot fit.
 <br>
-The French philosopher Jacques Derrida asks: What constitutes an "other?" Notice, I did not say who. One of the most compelling parts of Derrida's The Animal That Therefore I Am, translated by David Wills from the original French, is the importance of naming. In English, "name calling" retains a sense of violence in the way that logocentrism the West's obsession with words and language—assumes the sanctity of the reality that it names. You must name that which you need to sort, categorize, classify, or order, and yet all attempts at sealing things with language will eventually fail.
+The French philosopher Jacques Derrida asks: What constitutes an "other?" Notice, I did not say who. One of the most compelling parts of Derrida's The Animal That Therefore I Am, translated by David Wills from the original French, is the importance of naming. In English, "name calling" retains a sense of violence in the way that logocentrism the West's obsession with words and language assumes the sanctity of the reality that it names. You must name that which you need to sort, categorize, classify, or order, and yet all attempts at sealing things with language will eventually fail.
 
 
 
@@ -130,7 +198,7 @@ The French philosopher Jacques Derrida asks: What constitutes an "other?" Notice
 <p id="number">5</p>
 </div>
 <div class="page5">
-<p id="text">This passage resonated with me: "there is already a heterogeneous multiplicity of the living, or more precisely a multiplicity of organizations of relations between living and dead." Postcolonial studies, black studies, the study of slavery, women and gender studies, disability studies, etc. can also be said to be the study of those who have been, could be, or are considered animals. Is this a naming, a consideration, a recognition, a regard, or a refusal? Derrida writes on "the Animal" as "all living things that man does not recognize as his fellows, his neighbors or his brothers."
+<p id="text">This passage resonated with me: "there is already <br>a heterogeneous multiplicity of the living, or more precisely a multiplicity of organizations of relations between living and dead." Postcolonial studies, black studies, the study of slavery, women and gender studies, disability studies, etc. can also be said to be the study of those who have been, could be, or are considered animals. Is this a naming, a consideration, a recognition, a regard, or a refusal? Derrida writes on "the Animal" as "all living things that man does not recognize as his fellows, his neighbors or his brothers."
 	<br>
 Read this book pages at a time, in the earliest morning you can find.
 </p>
@@ -138,10 +206,91 @@ Read this book pages at a time, in the earliest morning you can find.
 <p id="number">6</p>
 </a>
 </div>
-<!-- <span class="dot"></span>
-<span class="dot"></span>
-<span class="dot"></span>
-<span class="dot"></span> -->
+<div class="page6">
+</div>
+<div class="page7">
+</div>
+<script>
+
+	var msg  = document.title;
+      var speed = 150;
+      var endChar = "... ";
+      var pos = 0;
+      
+      function moveTitle()
+      {
+       	var ml = msg.length;
+      		
+      	title = msg.substr(pos,ml) + endChar + msg.substr(0,pos);
+    	document.title = title;
+      	
+        pos++;
+    	if (pos > ml) pos=0;
+        window.setTimeout("moveTitle()",speed);
+      }
+  
+      moveTitle();
+
+	! function(e, t) {
+  "object" == typeof exports && "undefined" != typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define(t) : e.darken = t()
+}(this, function() {
+  var e = function(e, t) {
+    var r = this;
+    "function" == typeof e && (t = e, e = {}), e = Object.assign({
+      container: null,
+      default: "light",
+      toggle: null,
+      remember: "darken-mode",
+      usePrefersColorScheme: !0,
+      class: "darken",
+      variables: {}
+    }, e), this.dark = !1, e.remember ? localStorage.getItem(e.remember) ? e.default = localStorage.getItem(e.remember) : e.usePrefersColorScheme && (window.matchMedia("(prefers-color-scheme: dark)") ? e.default = "dark" : window.matchMedia("(prefers-color-scheme: light)") && (e.default = "light")) : e.usePrefersColorScheme && (window.matchMedia("(prefers-color-scheme: dark)") ? e.default = "dark" : window.matchMedia("(prefers-color-scheme: light)") && (e.default = "light"), window.matchMedia("(prefers-color-scheme: dark)").addListener(function(e) {
+      e.matches && r.on()
+    }), window.matchMedia("(prefers-color-scheme: light)").addListener(function(e) {
+      e.matches && r.off()
+    })), e.toggle && document.querySelector(e.toggle).addEventListener("click", function(e) {
+      e.preventDefault(), r.toggle()
+    }), document.addEventListener("darken-dark", function() {
+      e.container ? document.querySelector(e.container).classList.add(e.class) : document.body.classList.add(e.class);
+      for (var o = e.container ? document.querySelector(e.container) : document.documentElement, n = 0, a = Object.entries(e.variables); n < a.length; n += 1) {
+        var d = a[n],
+          c = d[0],
+          i = d[1];
+        i && "object" == typeof i && (Array.isArray(i) ? o.style.setProperty(c, i[1]) : o.style.setProperty(c, i.dark))
+      }
+      e.remember && localStorage.setItem(e.remember, r.dark ? "dark" : "light"), "function" == typeof t && t(r.dark)
+    }, !1), document.addEventListener("darken-light", function() {
+      e.container ? document.querySelector(e.container).classList.remove(e.class) : document.body.classList.remove(e.class);
+      for (var o = e.container ? document.querySelector(e.container) : document.documentElement, n = 0, a = Object.entries(e.variables); n < a.length; n += 1) {
+        var d = a[n],
+          c = d[0],
+          i = d[1];
+        i && "object" == typeof i && (Array.isArray(i) ? o.style.setProperty(c, i[0]) : o.style.setProperty(c, i.light))
+      }
+      e.remember && localStorage.setItem(e.remember, r.dark ? "dark" : "light"), "function" == typeof t && t(r.dark)
+    }, !1), "light" === e.default ? this.off() : "dark" === e.default && this.on()
+  };
+  return e.prototype.toggle = function() {
+    this.dark = !this.dark, this.dark ? document.dispatchEvent(new Event("darken-dark")) : document.dispatchEvent(new Event("darken-light"))
+  }, e.prototype.on = function() {
+    this.dark = !0, document.dispatchEvent(new Event("darken-dark"))
+  }, e.prototype.off = function() {
+    this.dark = !1, document.dispatchEvent(new Event("darken-light"))
+  }, e
+});
+
+const darkmode = new darken({
+  toggle: "#dark-mode-toggle",
+  variables: {
+    "--primary-color": ["lightblue", "#002c47"],
+    "--secondary-color": ["#002c47", "#lightblue"],
+     "--third-color": ["rgb(235, 231, 216)", "#003f66"],
+   "--fourth-color": ["#003f66", "rgb(235, 231, 216)"],
+    "--mode-icon": ["'\\f185'", "'\\f186'"],
+    "--mode-icon-color": ["#FDB813", "#E5E5E5"],
+  }
+});
+</script>
 
 </body>
 </html>

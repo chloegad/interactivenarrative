@@ -1,54 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>A reading Life</title>
+	<link rel="icon" 
+      type="image/png" 
+      href="page.png">
+	<title>A reading Life By Tiana Richards</title>
 <style>
 
-	body{
+@import "compass/css3";
+
+	body{padding-top: 3%;
 		background-color: lightblue; 
+		 background-color: var(--primary-color);
+  
+  transition: all 300ms ease;
 	}
 
 .page1{
 	position: absolute;
+	left: 5%;
 	width:  30%;
 	height:   80%;
 	padding-top: 5%;
 	padding-left: 5%; 
-	background-color: rgb(235, 231, 216);
+	background-color: var(--third-color);
 	border: 2px solid black;
 	z-index: 2; 
 }
 .page2{
 	position: absolute;
-	left: 1%; 
+	left: 6.5%; 
 	width:  30%;
 	height:   80%;
 	padding-top: 5%;
 	padding-left: 5%; 
-	background-color: rgb(235, 231, 216);
+	background-color: var(--third-color);
 	border: 2px solid black;
 	z-index: 2; 
 }
 .page3{
 	position: absolute;
-	left: 2%; 
+	left: 8%; 
 	width:  30%;
 	height:   80%;
 	padding-top: 5%;
 	padding-left: 5%; 
-	background-color: rgb(235, 231, 216);
+	background-color: var(--third-color);
 	border: 2px solid black;
 	z-index: 2; 
 }
 .page4{
 	position: absolute;
-	left: 3%; 
+	left: 10%; 
 	width:  30%;
 	height:   80%;
 	padding-top: 5%;
 	padding-left: 5%; 
 	padding-right: 5%;
-	background-color: rgb(235, 231, 216);
+	background-color: var(--third-color);
 	border: 2px solid black;
 	z-index: 2; 
 	text-align: left; 
@@ -60,7 +69,7 @@
 	height:   80%;
 	padding-top: 5%;
 	padding-left: 5%; 
-	background-color: rgb(235, 231, 216);
+	background-color: var(--third-color);
 	border: 2px solid black;
 	z-index: 2; 
 	padding-right: 5%;
@@ -68,14 +77,14 @@
 #head{font-family: myFirstFont;
 	top:4%;
 	position: absolute;
-	color: rgb(0,0,77);
+	color: var(--fourth-color);
 	font-size: 30px;
 }
 #text{font-family: myFirstFont;
 	margin-top: 0%;
 	font-size: 20px;
 line-height: 1.5;
-color: rgb(0,0,77);
+color:  var(--fourth-color);
 
 
 }
@@ -83,38 +92,66 @@ color: rgb(0,0,77);
 	position: absolute;
 	left:95%;
 	top: 94%;
-	color: rgb(0,0,77);
+	color: var(--fourth-color);
+	 transform: skewX(0.001deg);
+	 transition: transform .3s ease-in-out;
 }
-.dot {position: absolute;
-  height: 25px;
-  width: 25px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
- /* left:90%;
-	top: 94%;*/
+
+#number:hover {
+    transform: skewX(-20deg);
 }
+
+
+:root {
+
+  --primary-color: lightblue;
+  --secondary-color: #002c47;
+   --third-color: rgb(235, 231, 216);
+   --fourth-color: #003f66;
+
+
+
+ }
+
+
+.icon-button {top: 0%;
+	left: 97%;
+  position: absolute;
+}
+
+.icon-button:before {
+  content: var(--mode-icon);
+  color: var(--mode-icon-color);
+  font-family: ClassicFortAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  font-size: 50px;
+}
+
+.mode-button {
+  float:right;
+  background-color: transparent;
+  border-radius: 500px;
+  border: none;
+}
+
 @font-face{
 font-family: myFirstFont;
 src: url("BigCaslonRegular.otf");
 
 }
-.container {
-  position: fixed;
-  top: -30px; // Hide the horizontal scrollbar.
-  left: 0;
-  width: 100vh;
-  height: calc(100vw);
 
-  overflow: scroll;
-  transform: rotate(-90deg);
-  transform-origin: center calc(50vh);
-}
 
 </style>
 </head>
 <body>
 
+
+ <button id="dark-mode-toggle" class="mode-button">
+      <i class="icon-button"></i>
+
+    </button>
 <div class="page1">
 <p> hi</p>
 </div>
@@ -128,28 +165,105 @@ src: url("BigCaslonRegular.otf");
 <h1 id="head">On Unraveling</h1>
 <br>
 <br>
-<p id="text">To be caught in the mood of reading is to be unraveled. Think of a thin chain necklace, one of your favorites, knotted almost to the point of no return. Both a tangled chain and a text must be loved, loosened, and delicately gripped. With reading, however, you are lucky if you find yourself caught, because it means you have something to hold on to, something to puzzle over, something to work through.
+<p id="text">To be caught in the mood of reading is to be unraveled. Think of a thin chain necklace, one of your favorites, knotted almost to the point of no return. Both a tangled chain and a text must be loved, loosened, and delicately gripped. With reading, however, you are lucky if you find yourself caught, because it means you have something to hold on to, something to puzzle over, something to <br> work through.
 	<br>
 People often speak of the pleasures of reading imagination, memory, knowledge but sometimes pleasures hurt, too. What I mean to say is that I read when I am happy, sad, and everything in between. I read alone, with others, and with others in mind. Of course, there are times when I can not read, more times than I would like, but I always have reading in my back pocket as something that will not only nourish my creative life, whatever that is, but generally keep me alive.
 <br>
-Even with the reasonable knowledge of the resources at my disposal, I find it hard to sustain life (mine, the lives of others), let alone a creative life. Even when I do not feel like it (and I often do not feel like it), survival is a fight. But in this sense, my life is creative: I have to create it. We all experiment in order to survive. 
+Even with the reasonable knowledge of the resources at my disposal, I find it hard to sustain life (mine, the lives of others), let alone a creative life. Even when I do not feel like it (and I often do not feel like it), survival is a fight. But in this sense, my life is creative: I have to create it. <br>We all experiment in order to survive. 
 
 </p>
 <p id="number">1</p>
 </div>
 <div class="page5">
-<p id="text">Life does not just happen; even if we do not notice, and especially when we do not, we are making it happen. Some feminists have called this theory of everyday life “social reproduction,” a concept that acknowledges that society creates and recreates itself through the work of others, and often women.
+<p id="text">Life does not just happen; even if we do not notice, and especially when we do not, we are making it happen. Some feminists have called this theory of everyday life "social reproduction," a concept that acknowledges that society creates and recreates itself through the work of others, and often women.
 	<br>
-In no particular order, then, here is a small library of reading materials that have, in recent times, kept me going. My point here is not that you take each selection as a kind of what to read guide, but rather as a case study, or an invitation to move through and around these particular texts (or other texts altogether) in your own way. Each opens up to a whole new reading list and a whole new way to relate to yourself, and to your creative life if you let it.
+In no particular order, then, here is a small library of reading materials that have, in recent times, kept me going. My point here is not that you take each selection as a kind of what to read guide, but rather as a case study, or an invitation to move through and around these particular texts (or other texts altogether) in your own way. Each opens up to a whole new reading list and<br> a whole new way to relate to yourself, and to your creative life if you let it.
 </p>
 <a href="gettingclose.html">
 <p id="number">2</p>
 </a>
 </div>
-<!-- <span class="dot"></span>
-<span class="dot"></span>
-<span class="dot"></span>
-<span class="dot"></span> -->
+<script>
+
+	var msg  = document.title;
+      var speed = 150;
+      var endChar = "... ";
+      var pos = 0;
+      
+      function moveTitle()
+      {
+       	var ml = msg.length;
+      		
+      	title = msg.substr(pos,ml) + endChar + msg.substr(0,pos);
+    	document.title = title;
+      	
+        pos++;
+    	if (pos > ml) pos=0;
+        window.setTimeout("moveTitle()",speed);
+      }
+  
+      moveTitle();
+
+	! function(e, t) {
+  "object" == typeof exports && "undefined" != typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define(t) : e.darken = t()
+}(this, function() {
+  var e = function(e, t) {
+    var r = this;
+    "function" == typeof e && (t = e, e = {}), e = Object.assign({
+      container: null,
+      default: "light",
+      toggle: null,
+      remember: "darken-mode",
+      usePrefersColorScheme: !0,
+      class: "darken",
+      variables: {}
+    }, e), this.dark = !1, e.remember ? localStorage.getItem(e.remember) ? e.default = localStorage.getItem(e.remember) : e.usePrefersColorScheme && (window.matchMedia("(prefers-color-scheme: dark)") ? e.default = "dark" : window.matchMedia("(prefers-color-scheme: light)") && (e.default = "light")) : e.usePrefersColorScheme && (window.matchMedia("(prefers-color-scheme: dark)") ? e.default = "dark" : window.matchMedia("(prefers-color-scheme: light)") && (e.default = "light"), window.matchMedia("(prefers-color-scheme: dark)").addListener(function(e) {
+      e.matches && r.on()
+    }), window.matchMedia("(prefers-color-scheme: light)").addListener(function(e) {
+      e.matches && r.off()
+    })), e.toggle && document.querySelector(e.toggle).addEventListener("click", function(e) {
+      e.preventDefault(), r.toggle()
+    }), document.addEventListener("darken-dark", function() {
+      e.container ? document.querySelector(e.container).classList.add(e.class) : document.body.classList.add(e.class);
+      for (var o = e.container ? document.querySelector(e.container) : document.documentElement, n = 0, a = Object.entries(e.variables); n < a.length; n += 1) {
+        var d = a[n],
+          c = d[0],
+          i = d[1];
+        i && "object" == typeof i && (Array.isArray(i) ? o.style.setProperty(c, i[1]) : o.style.setProperty(c, i.dark))
+      }
+      e.remember && localStorage.setItem(e.remember, r.dark ? "dark" : "light"), "function" == typeof t && t(r.dark)
+    }, !1), document.addEventListener("darken-light", function() {
+      e.container ? document.querySelector(e.container).classList.remove(e.class) : document.body.classList.remove(e.class);
+      for (var o = e.container ? document.querySelector(e.container) : document.documentElement, n = 0, a = Object.entries(e.variables); n < a.length; n += 1) {
+        var d = a[n],
+          c = d[0],
+          i = d[1];
+        i && "object" == typeof i && (Array.isArray(i) ? o.style.setProperty(c, i[0]) : o.style.setProperty(c, i.light))
+      }
+      e.remember && localStorage.setItem(e.remember, r.dark ? "dark" : "light"), "function" == typeof t && t(r.dark)
+    }, !1), "light" === e.default ? this.off() : "dark" === e.default && this.on()
+  };
+  return e.prototype.toggle = function() {
+    this.dark = !this.dark, this.dark ? document.dispatchEvent(new Event("darken-dark")) : document.dispatchEvent(new Event("darken-light"))
+  }, e.prototype.on = function() {
+    this.dark = !0, document.dispatchEvent(new Event("darken-dark"))
+  }, e.prototype.off = function() {
+    this.dark = !1, document.dispatchEvent(new Event("darken-light"))
+  }, e
+});
+
+const darkmode = new darken({
+  toggle: "#dark-mode-toggle",
+  variables: {
+    "--primary-color": ["lightblue", "#002c47"],
+    "--secondary-color": ["#002c47", "#lightblue"],
+     "--third-color": ["rgb(235, 231, 216)", "#003f66"],
+   "--fourth-color": ["#003f66", "rgb(235, 231, 216)"],
+    "--mode-icon": ["'\\f185'", "'\\f186'"],
+    "--mode-icon-color": ["#FDB813", "#E5E5E5"],
+  }
+});
+</script>
 
 </body>
 </html>

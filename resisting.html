@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>A reading Life</title>
+	<link rel="icon" 
+      type="image/png" 
+      href="page.png">
+	<title>A reading Life By Tiana Richards</title>
 <style>
 
-	body{
+	body{padding-top: 3%; 
 		background-color: lightblue; 
+					 background-color: var(--primary-color);
+  
+  transition: all 300ms ease;
 	}
 
 .page1{
 	position: absolute;
 	width:  30%;
 	height:   80%;
+	left: 5%;
 	padding-top: 5%;
 	padding-left: 5%; 
-	background-color: rgb(235, 231, 216);
+	background-color: var(--third-color);
 	border: 2px solid black;
 	z-index: 2; 
 }
 .page2{
 	position: absolute;
-	left: 1%; 
+	left: 6.5%; 
 	width:  30%;
 	height:   80%;
 	padding-top: 5%;
 	padding-left: 5%; 
-	background-color: rgb(235, 231, 216);
+	background-color: var(--third-color);
 	border: 2px solid black;
 	z-index: 2; 
 }
 .page3{
 	position: absolute;
-	left: 2%; 
+	left: 8%; 
 	width:  30%;
 	height:   80%;
 	padding-top: 5%;
 	padding-left: 5%; 
-	background-color: rgb(235, 231, 216);
+	background-color: var(--third-color);
 	border: 2px solid black;
 	z-index: 2; 
 }
 .page4{
 	position: absolute;
-	left: 3%; 
+	left: 10%; 
 	width:  30%;
 	height:   80%;
 	padding-top: 5%;
 	padding-left: 5%; 
 	padding-right: 5%;
-	background-color: rgb(235, 231, 216);
+	background-color: var(--third-color);
 	border: 2px solid black;
 	z-index: 2; 
 	text-align: left; 
@@ -60,22 +67,58 @@
 	height:   80%;
 	padding-top: 5%;
 	padding-left: 5%; 
-	background-color: rgb(235, 231, 216);
+	background-color: var(--third-color);
 	border: 2px solid black;
 	z-index: 2; 
+	padding-right: 5%;
+}
+.page6{
+	position: absolute;
+	left: 56%; 
+	width:  30%;
+	height:   80%;
+	padding-top: 5%;
+	padding-left: 5%; 
+	background-color: var(--third-color);
+	border: 2px solid black;
+	z-index: 0; 
+	padding-right: 5%;
+}
+.page7{
+	position: absolute;
+	left: 57%; 
+	width:  30%;
+	height:   80%;
+	padding-top: 5%;
+	padding-left: 5%; 
+	background-color: var(--third-color);
+	border: 2px solid black;
+	z-index: 0; 
+	padding-right: 5%;
+}
+.page8{
+	position: absolute;
+	left: 58%; 
+	width:  30%;
+	height:   80%;
+	padding-top: 5%;
+	padding-left: 5%; 
+	background-color: var(--third-color);
+	border: 2px solid black;
+	z-index: 0; 
 	padding-right: 5%;
 }
 #head{font-family: myFirstFont;
 	top:4%;
 	position: absolute;
-	color: rgb(0,0,77);
+	color: var(--fourth-color);
 	font-size: 30px;
 }
 #text{font-family: myFirstFont;
 	margin-top: 0%;
 	font-size: 20px;
 line-height: 1.5;
-color: rgb(0,0,77);
+color: var(--fourth-color);
 
 
 }
@@ -83,16 +126,47 @@ color: rgb(0,0,77);
 	position: absolute;
 	left:95%;
 	top: 94%;
-	color: rgb(0,0,77);
+	color: var(--fourth-color);
+	transform: skewX(0.001deg);
+	 transition: transform .3s ease-in-out;
 }
-.dot {position: absolute;
-  height: 25px;
-  width: 25px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
- /* left:90%;
-	top: 94%;*/
+
+#number:hover {
+    transform: skewX(-20deg);
+}
+
+:root {
+
+  --primary-color: lightblue;
+  --secondary-color: #002c47;
+   --third-color: rgb(235, 231, 216);
+   --fourth-color: #003f66;
+
+
+
+ }
+
+
+.icon-button {top: 0%;
+	left: 97%;
+  position: absolute;
+}
+
+.icon-button:before {
+  content: var(--mode-icon);
+  color: var(--mode-icon-color);
+  font-family: ClassicFortAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  font-size: 50px;
+}
+
+.mode-button {
+  float:right;
+  background-color: transparent;
+  border-radius: 500px;
+  border: none;
 }
 @font-face{
 font-family: myFirstFont;
@@ -103,6 +177,11 @@ src: url("BigCaslonRegular.otf");
 </style>
 </head>
 <body>
+
+		 <button id="dark-mode-toggle" class="mode-button">
+      <i class="icon-button"></i>
+
+    </button>
 <div class="page1">
 <p> hi</p>
 </div>
@@ -122,10 +201,10 @@ src: url("BigCaslonRegular.otf");
 
 	<br>
 	<br>
-Recently as a guest in a seminar run by a well known professor who was visiting from another school, I said that I did not want to police my own students through surveillance and enforcement. Instead, I had tried to foster a communitarian environment, albeit in a corporate university that could never accept it. She agreed with my approach to an extent, but snapped back by saying I did not have the luxury not to be just a little authoritarian (my words, not hers). She told me that "as a black woman" (she was not black but of color), students would undermine me from the get go. Her caution was, in some sense, spurred by the imperative of professionalization.
+Recently as a guest in a seminar run by a well known professor who was visiting from another school, I said that <br>I did not want to police my own students through surveillance and enforcement. Instead, I had tried to foster a communitarian environment, albeit in a corporate university that could never accept it. She agreed with my approach to an extent, but snapped back by saying I did not have the luxury not to be just a little authoritarian (my words, not hers). She told me that "as a black woman" (she was not black but of color), students would undermine me from the get go. Her caution was, in some sense, spurred by the imperative of professionalization.
 
 <br>
-As I approach the end of my doctoral program (and thus my debut on the job market), I find myself increasingly refusing "professionalization" just for the sake of job security. At the same time, I ca not deny the fact that as much as I am against the university's approaches, I am simultaneously beholden to it, and to all of its structures of power. In this way, the American university chips away at you until you forget you had friends, family, or a life. You become self regulating. You forget how to imagine, and you become small.
+As I approach the end of my doctoral program (and thus my debut on the job market), I find myself increasingly refusing "professionalization" just for the sake of job security. <br>At the same time, I can not deny the fact that as much as <br>I am against the university's approaches, I am simultaneously beholden to it, and to all of its structures of power. In this way, the American university chips away at you until you forget you had friends, family, or a life. <br>You become self regulating. You forget how to imagine,<br> and you become small.
 
 
 
@@ -143,10 +222,95 @@ Whether for Du Bois life work (or lifework?) is defined as the main work we carr
 <p id="number">8</p>
 </a>
 </div>
-<!-- <span class="dot"></span>
-<span class="dot"></span>
-<span class="dot"></span>
-<span class="dot"></span> -->
+<div class="page8">
+</div>
+<div class="page7">
+</div>
+<div class="page6">
+</div>
+
+
+<script>
+
+	var msg  = document.title;
+      var speed = 150;
+      var endChar = "... ";
+      var pos = 0;
+      
+      function moveTitle()
+      {
+       	var ml = msg.length;
+      		
+      	title = msg.substr(pos,ml) + endChar + msg.substr(0,pos);
+    	document.title = title;
+      	
+        pos++;
+    	if (pos > ml) pos=0;
+        window.setTimeout("moveTitle()",speed);
+      }
+  
+      moveTitle();
+
+	! function(e, t) {
+  "object" == typeof exports && "undefined" != typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define(t) : e.darken = t()
+}(this, function() {
+  var e = function(e, t) {
+    var r = this;
+    "function" == typeof e && (t = e, e = {}), e = Object.assign({
+      container: null,
+      default: "light",
+      toggle: null,
+      remember: "darken-mode",
+      usePrefersColorScheme: !0,
+      class: "darken",
+      variables: {}
+    }, e), this.dark = !1, e.remember ? localStorage.getItem(e.remember) ? e.default = localStorage.getItem(e.remember) : e.usePrefersColorScheme && (window.matchMedia("(prefers-color-scheme: dark)") ? e.default = "dark" : window.matchMedia("(prefers-color-scheme: light)") && (e.default = "light")) : e.usePrefersColorScheme && (window.matchMedia("(prefers-color-scheme: dark)") ? e.default = "dark" : window.matchMedia("(prefers-color-scheme: light)") && (e.default = "light"), window.matchMedia("(prefers-color-scheme: dark)").addListener(function(e) {
+      e.matches && r.on()
+    }), window.matchMedia("(prefers-color-scheme: light)").addListener(function(e) {
+      e.matches && r.off()
+    })), e.toggle && document.querySelector(e.toggle).addEventListener("click", function(e) {
+      e.preventDefault(), r.toggle()
+    }), document.addEventListener("darken-dark", function() {
+      e.container ? document.querySelector(e.container).classList.add(e.class) : document.body.classList.add(e.class);
+      for (var o = e.container ? document.querySelector(e.container) : document.documentElement, n = 0, a = Object.entries(e.variables); n < a.length; n += 1) {
+        var d = a[n],
+          c = d[0],
+          i = d[1];
+        i && "object" == typeof i && (Array.isArray(i) ? o.style.setProperty(c, i[1]) : o.style.setProperty(c, i.dark))
+      }
+      e.remember && localStorage.setItem(e.remember, r.dark ? "dark" : "light"), "function" == typeof t && t(r.dark)
+    }, !1), document.addEventListener("darken-light", function() {
+      e.container ? document.querySelector(e.container).classList.remove(e.class) : document.body.classList.remove(e.class);
+      for (var o = e.container ? document.querySelector(e.container) : document.documentElement, n = 0, a = Object.entries(e.variables); n < a.length; n += 1) {
+        var d = a[n],
+          c = d[0],
+          i = d[1];
+        i && "object" == typeof i && (Array.isArray(i) ? o.style.setProperty(c, i[0]) : o.style.setProperty(c, i.light))
+      }
+      e.remember && localStorage.setItem(e.remember, r.dark ? "dark" : "light"), "function" == typeof t && t(r.dark)
+    }, !1), "light" === e.default ? this.off() : "dark" === e.default && this.on()
+  };
+  return e.prototype.toggle = function() {
+    this.dark = !this.dark, this.dark ? document.dispatchEvent(new Event("darken-dark")) : document.dispatchEvent(new Event("darken-light"))
+  }, e.prototype.on = function() {
+    this.dark = !0, document.dispatchEvent(new Event("darken-dark"))
+  }, e.prototype.off = function() {
+    this.dark = !1, document.dispatchEvent(new Event("darken-light"))
+  }, e
+});
+
+const darkmode = new darken({
+  toggle: "#dark-mode-toggle",
+  variables: {
+    "--primary-color": ["lightblue", "#002c47"],
+    "--secondary-color": ["#002c47", "#lightblue"],
+     "--third-color": ["rgb(235, 231, 216)", "#003f66"],
+   "--fourth-color": ["#003f66", "rgb(235, 231, 216)"],
+    "--mode-icon": ["'\\f185'", "'\\f186'"],
+    "--mode-icon-color": ["#FDB813", "#E5E5E5"],
+  }
+});
+</script>
 
 </body>
 </html>
